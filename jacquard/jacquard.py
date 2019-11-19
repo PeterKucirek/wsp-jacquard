@@ -97,12 +97,10 @@ class Jacquard:
             raise JacquardSpecificationError("Item '%s' is missing from jacquard <%s>" % (item, self.namespace))
         return self._contents[item]
 
-    def as_dict(self,  value_type=None):
+    def as_dict(self, value_type=None):
         """Converts this entry to a primitive dictionary, using specified types for the keys and values.
 
         Args:
-            key_type (type, optional): Defaults to ``None``. The type to which the keys will be cast, or None to ignore
-                casting.
             value_type (type, optional): Defaults to ``None``. The type to which the values will be cast, or None to
                 ignore casting.
 
@@ -113,7 +111,7 @@ class Jacquard:
         if value_type is None:
             return self._contents.copy()
 
-        def any_type(val): return val
+        def any_type(value): return value
 
         if value_type is None: value_type = any_type
 

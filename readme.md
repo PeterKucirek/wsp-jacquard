@@ -1,0 +1,6 @@
+# Jacquard: JSON-based configuration for models
+
+Historically, a [Jacquard machine is a programmable loom controlled by a chain of cards](https://en.wikipedia.org/wiki/Jacquard_machine); the term "jacquard" refers to the card (or set of cards) used to configure the machine. The `jacquard` library is designed to facilitate application of models, where the a model's configuration (locations of data, options, parameters) are stored in a human-readable JSON file. One of the major design principles of the Jacquard is that model specification errors occur often, and ought to be produced in a format which is as readable as possible. Instead of getting the standard `NoneType has no attribute 'iterations'` or `KeyError: scenario`, Jacquard gives graceful messages like `Item 'iterations' is missing from jacquard <model.traffic_assignment>`. As a result, code which calls a Jacquard becomes self-validating.
+
+Jacquards are always ordered, and allow comments in C-style starting with `//` (these are stripped out during parsing).
+ 

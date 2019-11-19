@@ -28,9 +28,7 @@ class JacquardTypeError(ValueError):
 
 
 class JacquardValue(object):
-    """
-    Wraps the value of a Jacquard attribute to facilitate type-checking and pretty error messages.
-    """
+    """Wraps the value of a Jacquard attribute to facilitate type-checking and pretty error messages."""
 
     def __init__(self, value, name, owner=None):
         self.value = value
@@ -43,14 +41,13 @@ class JacquardValue(object):
 
     @property
     def namespace(self):
-        """ Dot-separated name of this jacquard value"""
+        """Dot-separated name of this jacquard value"""
         if self._owner is not None:
             return self._owner.namespace + '.' + self._name
         return self._name
 
     def as_type(self, type_):
-        """
-        Attempts to cast the value to a specified type.
+        """Attempts to cast the value to a specified type.
 
         Args:
             type_ (type): The type (e.g. int, float, etc.) to try to cast
@@ -60,7 +57,6 @@ class JacquardValue(object):
 
         Raises:
             JacquardTypeError: if the casting could not be performed.
-
         """
 
         try:
@@ -73,8 +69,7 @@ class JacquardValue(object):
             raise JacquardTypeError(message)
 
     def as_bool(self):
-        """
-        Resolves the value to bool
+        """Resolves the value to bool
 
         Raises:
             JacquardTypeError: If the value cannot be resolved to bool
@@ -82,8 +77,7 @@ class JacquardValue(object):
         return self.as_type(bool)
 
     def as_int(self):
-        """
-        Resolves the value to int
+        """Resolves the value to int
 
         Raises:
             JacquardTypeError: If the value cannot be resolved to int
@@ -91,8 +85,7 @@ class JacquardValue(object):
         return self.as_type(int)
 
     def as_float(self):
-        """
-        Resolves the value to float
+        """Resolves the value to float
 
         Raises:
             JacquardTypeError: If the value cannot be resolved to float
@@ -100,8 +93,7 @@ class JacquardValue(object):
         return self.as_type(float)
 
     def as_str(self):
-        """
-        Resolves the value to str
+        """Resolves the value to str
 
         Raises:
             JacquardTypeError: If the value cannot be resolved to str
@@ -109,15 +101,13 @@ class JacquardValue(object):
         return self.as_type(str)
 
     def as_list(self, sub_type=None):
-        """
-        Resolves the value to a list.
+        """Resolves the value to a list.
 
         Args:
             sub_type (type): Optional. Specifies the expected contiguous (uniform) type of the list to convert to.
 
         Returns:
             list: The value, as a list
-
         """
         if sub_type is None:
             return self.as_type(list)
@@ -129,8 +119,7 @@ class JacquardValue(object):
 
     if PATHLIB_LOADED:
         def as_path(self, parent=None):
-            """
-            Resolves the value to Path type (available only when using Python 3)
+            """Resolves the value to Path type (available only when using Python 3)
 
             Args:
                 parent: Optional parent folder if this is a relative path
@@ -142,15 +131,13 @@ class JacquardValue(object):
             return Path(self.as_str())
 
     def as_set(self, sub_type=None):
-        """
-        Converts the value to a set.
+        """Converts the value to a set.
 
         Args:
             sub_type (type): Optional. Specifies the expected contiguous (uniform) type of the set to convert to.
 
         Returns:
             set: The value, as a set
-
         """
         if sub_type is None: return self.as_type(set)
 
@@ -167,29 +154,25 @@ class JacquardValue(object):
 
 if six.PY3:
     def is_identifier(name):
-        """
-        Tests that the name is a valid Python variable name and does not collide with reserved keywords
+        """Tests that the name is a valid Python variable name and does not collide with reserved keywords
 
         Args:
             name (str): Name to test
 
         Returns:
             bool: If the name is 'Pythonic'
-
         """
 
         return name.isidentifier() and name not in kwlist
 else:
     def is_identifier(name):
-        """
-        Tests that the name is a valid Python variable name and does not collide with reserved keywords
+        """Tests that the name is a valid Python variable name and does not collide with reserved keywords
 
         Args:
             name (str): Name to test
 
         Returns:
             bool: If the name is 'Pythonic'
-
         """
 
         return bool(re.match(tokenize.Name + '$', name)) and name not in kwlist
@@ -197,8 +180,7 @@ else:
 
 @contextmanager
 def open_file(file_handle, **kwargs):
-    """
-    Context manager for opening files provided as several different types. Supports a file handler as a str, unicode,
+    """Context manager for opening files provided as several different types. Supports a file handler as a str, unicode,
     ``pathlib.Path``, or an already-opened handler.
 
     Args:
@@ -206,9 +188,7 @@ def open_file(file_handle, **kwargs):
         **kwargs: Keyword args passed to ``open()``. Usually mode='w'.
 
     Yields:
-        File:
-            The opened file handler. Automatically closed once out of context.
-
+        File: The opened file handler. Automatically closed once out of context.
     """
     opened = False
     if isinstance(file_handle, six.string_types):

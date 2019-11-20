@@ -7,11 +7,11 @@ import re
 
 from six import iteritems, StringIO
 
-from .api import JacquardParseError, JacquardSpecificationError, JacquardTypeError, JacquardValue, is_identifier, \
-    open_file
+from .api import (JacquardParseError, JacquardSpecificationError, JacquardTypeError, JacquardValue, is_identifier, 
+                  open_file)
 
 
-class Jacquard:
+class Jacquard(object):
     """Represents a model configuration, usually stored in JSON format with the order of items preserved and comments
     (beginning with '//') stripped out. Keys in the JSON file which conform to Python variable names (e.g.
     "my_attribute" but not "My Attribute") become *attributes* of the Jacquard object (e.g. instance.my_attribute).

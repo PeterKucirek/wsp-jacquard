@@ -136,7 +136,12 @@ class Jacquard:
         """Recursively converts the Jacquard back to primitive dictionaries"""
         child_dict = OrderedDict()
         for attr, item in iteritems(self._contents):
-            child_dict[attr] = item.serialize()
+            if isinstance(item, Jacquard):
+                child_dict[attr] = item.serialize()
+            elif isinstance(item, list):
+                child_dict[attr] = [x.serialize() if isinstance(x, Jacquard) else x for x in item]
+            else:
+                child_dict[attr] = item
         return child_dict
 
     def to_file(self, fp):

@@ -7,11 +7,11 @@ import re
 
 from six import iteritems, StringIO
 
-from .api import JacquardParseError, JacquardSpecificationError, JacquardTypeError, JacquardValue, is_identifier, \
-    open_file
+from .api import (JacquardParseError, JacquardSpecificationError, JacquardTypeError, JacquardValue, is_identifier, 
+                  open_file)
 
 
-class Jacquard:
+class Jacquard(object):
     """Represents a model configuration, usually stored in JSON format with the order of items preserved and comments
     (beginning with '//') stripped out. Keys in the JSON file which conform to Python variable names (e.g.
     "my_attribute" but not "My Attribute") become *attributes* of the Jacquard object (e.g. instance.my_attribute).
@@ -131,7 +131,12 @@ class Jacquard:
         """Recursively converts the Jacquard back to primitive dictionaries"""
         child_dict = OrderedDict()
         for attr, item in iteritems(self._contents):
-            child_dict[attr] = item.serialize()
+            if isinstance(item, Jacquard):
+                child_dict[attr] = item.serialize()
+            elif isinstance(item, list):
+                child_dict[attr] = [x.serialize() if isinstance(x, Jacquard) else x for x in item]
+            else:
+                child_dict[attr] = item
         return child_dict
 
     def to_file(self, fp):

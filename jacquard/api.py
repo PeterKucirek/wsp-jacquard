@@ -148,7 +148,7 @@ class JacquardValue(object):
 
     def serialize(self):
         if isinstance(self.value, list):
-            return [x.serialize() for x in self.value]
+            return [x.serialize() if hasattr(x, 'serialize') else x for x in self.value]
         return self.value
 
 

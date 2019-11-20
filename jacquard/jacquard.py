@@ -12,8 +12,7 @@ from .api import JacquardParseError, JacquardSpecificationError, JacquardTypeErr
 
 
 class Jacquard:
-    """
-    Represents a model configuration, usually stored in JSON format with the order of items preserved and comments
+    """Represents a model configuration, usually stored in JSON format with the order of items preserved and comments
     (beginning with '//') stripped out. Keys in the JSON file which conform to Python variable names (e.g.
     "my_attribute" but not "My Attribute") become *attributes* of the Jacquard object (e.g. instance.my_attribute).
 
@@ -98,25 +97,21 @@ class Jacquard:
             raise JacquardSpecificationError("Item '%s' is missing from jacquard <%s>" % (item, self.namespace))
         return self._contents[item]
 
-    def as_dict(self,  value_type=None):
-        """
-        Converts this entry to a primitive dictionary, using specified types for the keys and values.
+    def as_dict(self, value_type=None):
+        """Converts this entry to a primitive dictionary, using specified types for the keys and values.
 
         Args:
-            key_type (type, optional): Defaults to ``None``. The type to which the keys will be cast, or None to ignore
-                casting.
             value_type (type, optional): Defaults to ``None``. The type to which the values will be cast, or None to
                 ignore casting.
 
         Returns:
             dict: A dictionary containing the entry's keys and values
-
         """
 
         if value_type is None:
             return self._contents.copy()
 
-        def any_type(val): return val
+        def any_type(value): return value
 
         if value_type is None: value_type = any_type
 
@@ -145,12 +140,10 @@ class Jacquard:
         return child_dict
 
     def to_file(self, fp):
-        """
-        Writes the Jacquard to a JSON file.
+        """Writes the Jacquard to a JSON file.
 
         Args:
             fp (str): File path to the output files
-
         """
         dict_ = self.serialize()
         with open_file(fp, mode='w') as writer:
@@ -158,8 +151,7 @@ class Jacquard:
 
     @classmethod
     def from_file(cls, fp):
-        """
-        Reads a Jacquard from a JSON file. Comments beginning with '//' are ignored.
+        """Reads a Jacquard from a JSON file. Comments beginning with '//' are ignored.
 
         Args:
             fp (str): The path to the JSON file
@@ -169,7 +161,6 @@ class Jacquard:
 
         Raises:
             JacquardParseError: if there's a problem parsing the JSON file
-
         """
         with open_file(fp, mode='r') as reader:
             try:
@@ -183,8 +174,7 @@ class Jacquard:
 
     @classmethod
     def from_string(cls, s, file_name='<from_str>', root_name='<root>'):
-        """
-        Reads a Jacquard from a JSON file as a string. Comments beginning with '//' are ignored.
+        """Reads a Jacquard from a JSON file as a string. Comments beginning with '//' are ignored.
 
         Args:
             s (str): The string containing the Jacquard data, in JSON format.
@@ -197,7 +187,6 @@ class Jacquard:
 
         Raises:
             JacquardParseError: if there's a problem parsing the JSON file
-
         """
         sio = StringIO(s)
         try:
@@ -209,8 +198,7 @@ class Jacquard:
 
     @staticmethod
     def from_dict(dict_, file_name='<from_dict>', root_name='<root>'):
-        """
-        Converts a raw dictionary to a Jacquard object.
+        """Converts a raw dictionary to a Jacquard object.
 
         Args:
             dict_ (dict): The dictionary to create a Jacquard from
@@ -219,7 +207,6 @@ class Jacquard:
 
         Returns:
             Jacquard
-
         """
         return Jacquard(dict_, name=root_name, file_=file_name)
 

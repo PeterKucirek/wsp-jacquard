@@ -64,7 +64,7 @@ class Jacquard(object):
 
     @property
     def name(self):
-        """Short name of each part of the jacquard. For non-root Jacquards, this will be the name of the attribute used
+        """Short name of each part of the Jacquard. For non-root Jacquards, this will be the name of the attribute used
         to access this Jacquard from the parent."""
         return self._name
 
@@ -81,11 +81,19 @@ class Jacquard(object):
             return name
         return '.'.join([self._parent.namespace, name])
 
-    def __str__(self):
-        if self._parent is None:
-            return "Jacquard @%s" % self._file
+    @property
+    def file(self):
+        """The source used for creation of the Jacquard instance."""
+        return self._file
 
-        return "Jacquard(%s) @%s" % (self.namespace, self._file)
+    def __repr__(self):
+        if self._parent is None:
+            return "Jacquard @ %s" % self._file
+
+        return "Jacquard(%s) @ %s" % (self.namespace, self._file)
+
+    def __str__(self):
+        return "Jacquard(%s)" % self._name
 
     def __getattr__(self, item):
         raise JacquardSpecificationError("Item '%s' is missing from jacquard <%s>" % (item, self.namespace))

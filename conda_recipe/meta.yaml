@@ -1,0 +1,22 @@
+package:
+  name: wsp-jacquard
+  version: "1.0.0"
+
+source:
+  path: ../
+
+build:
+  number: auto
+  noarch: python
+
+requirements:
+  build:
+    - python>=3.7
+    - setuptools
+  run:
+    - python>=3.7
+    - six>=1.10
+
+about:
+  home: https://github.com/wsp-sag/wsp-jacquard
+  summary: A package designed to facilitate application of models, where the a model's configuration (locations of data, options, parameters) are stored in a human-readable JSON file.

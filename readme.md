@@ -46,7 +46,7 @@ It is **strongly recommended** that JSON key names _follow Python variable namin
 
 Using a Jacquard to self-validate a file is best shown by example:
 
-```json
+```javascript
 // example.json
 {
   "traffic_assignment": {

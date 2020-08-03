@@ -1,8 +1,15 @@
+from os import path
+from pkg_resources import safe_version
 from setuptools import setup, find_packages
+
+version = {}
+with open(path.join(path.dirname(path.realpath(__file__)), 'jacquard', 'version.py')) as fp:
+    exec(fp.read(), {}, version)
+version_string = safe_version(version['__version__'])
 
 setup(
     name='wsp-jacquard',
-    version='1.0.0',
+    version=version_string,
     description='JSON-based configuration handler for models',
     url='https://github.com/wsp-sag/wsp-jacquard',
     author='WSP',

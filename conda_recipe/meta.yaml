@@ -8,8 +8,8 @@ source:
   path: ../
 
 build:
-  number: auto
   noarch: python
+  script: python setup.py --quiet install --single-version-externally-managed --record record.txt
 
 requirements:
   host:
@@ -22,7 +22,7 @@ about:
   home: https://github.com/wsp-sag/wsp-jacquard
   license: MIT
   license_file: LICENSE
-  summary: JSON-based configuration handler for models.
+  summary: JSON-based configuration handler for models
 
 extra:
   maintainers:

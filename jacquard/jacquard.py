@@ -7,7 +7,7 @@ import re
 
 from six import iteritems, StringIO
 
-from .api import (JacquardParseError, JacquardSpecificationError, JacquardTypeError, JacquardValue, is_identifier, 
+from .api import (JacquardParseError, JacquardSpecificationError, JacquardTypeError, JacquardValue, is_identifier,
                   open_file)
 
 
@@ -149,15 +149,16 @@ class Jacquard(object):
                 child_dict[attr] = item
         return child_dict
 
-    def to_file(self, fp):
+    def to_file(self, fp, sort_keys=False):
         """Writes the Jacquard to a JSON file.
 
         Args:
             fp (str): File path to the output files
+            sort_keys (bool, optional): Defaults to ``True``.
         """
         dict_ = self.serialize()
         with open_file(fp, mode='w') as writer:
-            json.dump(dict_, writer, indent=2)
+            json.dump(dict_, writer, indent=2, sort_keys=sort_keys)
 
     @classmethod
     def from_file(cls, fp):

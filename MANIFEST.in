@@ -1,0 +1,2 @@
+include versioneer.py
+include jacquard/_version.py

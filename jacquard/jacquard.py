@@ -225,14 +225,15 @@ class Jacquard(object):
     def _parse_comments(reader):
         """Removes comments beginning with '//' from the stream"""
         regex = r'\s*(#|\/{2}).*$'
-        regex_inline = r'(:?(?:\s)*([A-Za-z\d\.{}]*)|((?<=\").*\"),?)(?:\s)*(((#|(\/{2})).*)|)$'
-
         pipe = []
         for line in reader:
-            if re.search(regex, line):
-                if re.search(r'^' + regex, line, re.IGNORECASE): continue
-                elif re.search(regex_inline, line):
-                    pipe.append(re.sub(regex_inline, r'\1', line))
+            line = line.rstrip()
+            result = re.search(regex, line)
+            if result:
+                if re.search(r'^' + regex, line, re.IGNORECASE):
+                    continue  # skip as entire line is a comment
+                else:
+                    pipe.append(line[:result.start()].rstrip())
             else:
                 pipe.append(line)
         return "\n".join(pipe)

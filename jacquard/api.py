@@ -118,17 +118,21 @@ class JacquardValue(object):
         ]
 
     if PATHLIB_LOADED:
-        def as_path(self, parent=None):
+        def as_path(self, parent=None, check_exist=False):
             """Resolves the value to Path type (available only when using Python 3)
 
             Args:
                 parent: Optional parent folder if this is a relative path
+                check_exist: Flag to check file existence
 
             Raises:
                 JacquardTypeError: If the value cannot be resolved to Path
             """
-            if parent is not None: return Path(parent) / Path(self.as_str())
-            return Path(self.as_str())
+            fp = Path(self.as_str()) if parent is None else (Path(parent) / Path(self.as_str()))
+            if check_exist:
+                if not fp.exists():
+                    raise FileNotFoundError('File `%s` not found' % fp.as_posix())
+            return fp
 
     def as_set(self, sub_type=None):
         """Converts the value to a set.

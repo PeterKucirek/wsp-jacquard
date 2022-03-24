@@ -129,10 +129,7 @@ class JacquardValue(object):
                 JacquardTypeError: If the value cannot be resolved to Path
             """
             fp = Path(self.as_str()) if parent is None else (Path(parent) / Path(self.as_str()))
-            if check_exist:
-                if not fp.exists():
-                    raise FileNotFoundError('File `%s` not found' % fp.as_posix())
-            return fp
+            return fp.resolve(strict=check_exist)
 
     def as_set(self, sub_type=None):
         """Converts the value to a set.

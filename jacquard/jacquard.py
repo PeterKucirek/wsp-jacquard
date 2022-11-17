@@ -1,14 +1,15 @@
-from __future__ import division, absolute_import, print_function, unicode_literals
+from __future__ import (absolute_import, division, print_function,
+                        unicode_literals)
 
 import json
 import os
-from collections import OrderedDict
 import re
+from collections import OrderedDict
 
-from six import iteritems, StringIO
+from six import StringIO, iteritems
 
-from .api import (JacquardParseError, JacquardSpecificationError, JacquardTypeError, JacquardValue, is_identifier,
-                  open_file)
+from .api import (JacquardParseError, JacquardSpecificationError,
+                  JacquardTypeError, JacquardValue, is_identifier, open_file)
 
 
 class Jacquard(object):

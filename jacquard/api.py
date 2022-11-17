@@ -1,9 +1,10 @@
-from __future__ import division, absolute_import, print_function, unicode_literals
+from __future__ import (absolute_import, division, print_function,
+                        unicode_literals)
 
-from keyword import kwlist
 import re
 import tokenize
 from contextlib import contextmanager
+from keyword import kwlist
 
 import six
 
@@ -35,9 +36,11 @@ class JacquardValue(object):
         self._name = str(name)
         self._owner = owner
 
-    def __str__(self): return str(self.value)
+    def __str__(self):
+        return str(self.value)
 
-    def __repr__(self): return "JacquardValue(%r)" % self.value
+    def __repr__(self):
+        return "JacquardValue(%r)" % self.value
 
     @property
     def namespace(self):
@@ -62,10 +65,7 @@ class JacquardValue(object):
         try:
             return type_(self.value)
         except (ValueError, TypeError):
-
-            message = "Attribute <{}> = '{}' could not be converted to {}".format(
-                self.namespace, self.value, type_
-            )
+            message = "Attribute <{}> = '{}' could not be converted to {}".format(self.namespace, self.value, type_)
             raise JacquardTypeError(message)
 
     def as_bool(self):
@@ -128,7 +128,9 @@ class JacquardValue(object):
             Raises:
                 JacquardTypeError: If the value cannot be resolved to Path
             """
-            fp = Path(self.as_str()) if parent is None else (Path(parent) / Path(self.as_str()))
+            fp = Path(self.as_str())
+            if (parent is not None) and (not fp.is_absolute()):
+                fp = Path(parent) / fp
             return fp.resolve(strict=check_exist)
 
     def as_set(self, sub_type=None):
@@ -140,7 +142,8 @@ class JacquardValue(object):
         Returns:
             set: The value, as a set
         """
-        if sub_type is None: return self.as_type(set)
+        if sub_type is None:
+            return self.as_type(set)
 
         return {
             item.as_type(sub_type)
@@ -163,7 +166,6 @@ if six.PY3:
         Returns:
             bool: If the name is 'Pythonic'
         """
-
         return name.isidentifier() and name not in kwlist
 else:
     def is_identifier(name):
@@ -175,7 +177,6 @@ else:
         Returns:
             bool: If the name is 'Pythonic'
         """
-
         return bool(re.match(tokenize.Name + '$', name)) and name not in kwlist
 
 

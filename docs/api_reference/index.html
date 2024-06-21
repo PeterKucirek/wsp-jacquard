@@ -10,7 +10,7 @@
     <link href="../_static/favicon-16x16.png" sizes="16x16" rel="icon" type="image/png">
     <link href="../_static/favicon-32x32.png" sizes="32x32" rel="icon" type="image/png">
     <link rel="apple-touch-icon" href="../_static/apple-touch-icon.png" sizes="180x180" type="image/png">
-    <title>Jacquard &#8212; wsp-jacquard 1.0.2 documentation</title>
+    <title>API Reference &#8212; wsp-jacquard 1.0.3 documentation</title>
   
   
   
@@ -37,14 +37,13 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
 
-    <script src="../_static/documentation_options.js?v=1ed6394b"></script>
+    <script src="../_static/documentation_options.js?v=baaebd52"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'jacquard/index';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api_reference/index';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="API" href="../api/index.html" />
-    <link rel="prev" title="wsp-jacquard: JSON Configuration Tools" href="../index.html" />
+    <link rel="prev" title="Overview" href="../overview/index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -122,8 +121,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="wsp-jacquard 1.0.2 documentation - Home"/>
-    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="wsp-jacquard 1.0.2 documentation - Home"/>`);</script>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="wsp-jacquard 1.0.3 documentation - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="wsp-jacquard 1.0.3 documentation - Home"/>`);</script>
   
   
 </a></div>
@@ -138,16 +137,16 @@
 <nav class="navbar-nav">
   <ul class="bd-navbar-elements navbar-nav">
     
-<li class="nav-item pst-header-nav-item current active">
-  <a class="nav-link nav-internal" href="#">
-    Jacquard
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../overview/index.html">
+    Overview
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
-  <a class="nav-link nav-internal" href="../api/index.html">
-    API
+<li class="nav-item pst-header-nav-item current active">
+  <a class="nav-link nav-internal" href="#">
+    API Reference
   </a>
 </li>
 
@@ -251,16 +250,16 @@ document.write(`
 <nav class="navbar-nav">
   <ul class="bd-navbar-elements navbar-nav">
     
-<li class="nav-item pst-header-nav-item current active">
-  <a class="nav-link nav-internal" href="#">
-    Jacquard
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../overview/index.html">
+    Overview
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
-  <a class="nav-link nav-internal" href="../api/index.html">
-    API
+<li class="nav-item pst-header-nav-item current active">
+  <a class="nav-link nav-internal" href="#">
+    API Reference
   </a>
 </li>
 
@@ -338,7 +337,7 @@ document.write(`
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    <li class="breadcrumb-item active" aria-current="page">Jacquard</li>
+    <li class="breadcrumb-item active" aria-current="page">API Reference</li>
   </ul>
 </nav>
 </div>
@@ -355,10 +354,12 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="jacquard">
-<h1>Jacquard<a class="headerlink" href="#jacquard" title="Link to this heading">#</a></h1>
-<p>Collection of classes and functions to configure models stored in a JSON format.</p>
-<dl class="py class" id="module-jacquard.jacquard">
+  <section id="api-reference">
+<h1>API Reference<a class="headerlink" href="#api-reference" title="Link to this heading">#</a></h1>
+<p>This page gives an collection of all public classes and functions that modifies and configures files and Jacquard attributes</p>
+<section id="module-jacquard.jacquard">
+<span id="jacquard-py"></span><h2>jacquard.py<a class="headerlink" href="#module-jacquard.jacquard" title="Link to this heading">#</a></h2>
+<dl class="py class">
 <dt class="sig sig-object py" id="jacquard.jacquard.Jacquard">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">jacquard.jacquard.</span></span><span class="sig-name descname"><span class="pre">Jacquard</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">jqd_dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#jacquard.jacquard.Jacquard" title="Link to this definition">#</a></dt>
 <dd><p>Represents a model configuration, usually stored in JSON format with the order of items preserved and comments
@@ -438,7 +439,7 @@ ignore casting.</p>
 <dd class="field-odd"><p><a class="reference internal" href="#jacquard.jacquard.Jacquard" title="jacquard.jacquard.Jacquard">Jacquard</a></p>
 </dd>
 <dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="../api/index.html#jacquard.api.JacquardParseError" title="jacquard.api.JacquardParseError"><strong>JacquardParseError</strong></a> – if there’s a problem parsing the JSON file</p>
+<dd class="field-even"><p><a class="reference internal" href="#jacquard.api.JacquardParseError" title="jacquard.api.JacquardParseError"><strong>JacquardParseError</strong></a> – if there’s a problem parsing the JSON file</p>
 </dd>
 </dl>
 </dd></dl>
@@ -462,7 +463,7 @@ ignore casting.</p>
 <dd class="field-odd"><p><a class="reference internal" href="#jacquard.jacquard.Jacquard" title="jacquard.jacquard.Jacquard">Jacquard</a></p>
 </dd>
 <dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="../api/index.html#jacquard.api.JacquardParseError" title="jacquard.api.JacquardParseError"><strong>JacquardParseError</strong></a> – if there’s a problem parsing the JSON file</p>
+<dd class="field-even"><p><a class="reference internal" href="#jacquard.api.JacquardParseError" title="jacquard.api.JacquardParseError"><strong>JacquardParseError</strong></a> – if there’s a problem parsing the JSON file</p>
 </dd>
 </dl>
 </dd></dl>
@@ -509,6 +510,184 @@ to access this Jacquard from the parent.</p>
 </dd></dl>
 
 </section>
+<section id="module-jacquard.api">
+<span id="api-py"></span><h2>api.py<a class="headerlink" href="#module-jacquard.api" title="Link to this heading">#</a></h2>
+<dl class="py exception">
+<dt class="sig sig-object py" id="jacquard.api.JacquardParseError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">jacquard.api.</span></span><span class="sig-name descname"><span class="pre">JacquardParseError</span></span><a class="headerlink" href="#jacquard.api.JacquardParseError" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="jacquard.api.JacquardSpecificationError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">jacquard.api.</span></span><span class="sig-name descname"><span class="pre">JacquardSpecificationError</span></span><a class="headerlink" href="#jacquard.api.JacquardSpecificationError" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="jacquard.api.JacquardTypeError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">jacquard.api.</span></span><span class="sig-name descname"><span class="pre">JacquardTypeError</span></span><a class="headerlink" href="#jacquard.api.JacquardTypeError" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="jacquard.api.JacquardValue">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">jacquard.api.</span></span><span class="sig-name descname"><span class="pre">JacquardValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">owner</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#jacquard.api.JacquardValue" title="Link to this definition">#</a></dt>
+<dd><p>Wraps the value of a Jacquard attribute to facilitate type-checking and pretty error messages.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="jacquard.api.JacquardValue.as_bool">
+<span class="sig-name descname"><span class="pre">as_bool</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#jacquard.api.JacquardValue.as_bool" title="Link to this definition">#</a></dt>
+<dd><p>Resolves the value to bool</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#jacquard.api.JacquardTypeError" title="jacquard.api.JacquardTypeError"><strong>JacquardTypeError</strong></a> – If the value cannot be resolved to bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="jacquard.api.JacquardValue.as_float">
+<span class="sig-name descname"><span class="pre">as_float</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#jacquard.api.JacquardValue.as_float" title="Link to this definition">#</a></dt>
+<dd><p>Resolves the value to float</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#jacquard.api.JacquardTypeError" title="jacquard.api.JacquardTypeError"><strong>JacquardTypeError</strong></a> – If the value cannot be resolved to float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="jacquard.api.JacquardValue.as_int">
+<span class="sig-name descname"><span class="pre">as_int</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#jacquard.api.JacquardValue.as_int" title="Link to this definition">#</a></dt>
+<dd><p>Resolves the value to int</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#jacquard.api.JacquardTypeError" title="jacquard.api.JacquardTypeError"><strong>JacquardTypeError</strong></a> – If the value cannot be resolved to int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="jacquard.api.JacquardValue.as_list">
+<span class="sig-name descname"><span class="pre">as_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sub_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#jacquard.api.JacquardValue.as_list" title="Link to this definition">#</a></dt>
+<dd><p>Resolves the value to a list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>sub_type</strong> (<em>type</em>) – Optional. Specifies the expected contiguous (uniform) type of the list to convert to.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The value, as a list</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="jacquard.api.JacquardValue.as_path">
+<span class="sig-name descname"><span class="pre">as_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_exist</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#jacquard.api.JacquardValue.as_path" title="Link to this definition">#</a></dt>
+<dd><p>Resolves the value to Path type (available only when using Python 3)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>parent</strong> – Optional parent folder if this is a relative path</p></li>
+<li><p><strong>check_exist</strong> – Flag to check file existence</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#jacquard.api.JacquardTypeError" title="jacquard.api.JacquardTypeError"><strong>JacquardTypeError</strong></a> – If the value cannot be resolved to Path</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="jacquard.api.JacquardValue.as_set">
+<span class="sig-name descname"><span class="pre">as_set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sub_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#jacquard.api.JacquardValue.as_set" title="Link to this definition">#</a></dt>
+<dd><p>Converts the value to a set.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>sub_type</strong> (<em>type</em>) – Optional. Specifies the expected contiguous (uniform) type of the set to convert to.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The value, as a set</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>set</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="jacquard.api.JacquardValue.as_str">
+<span class="sig-name descname"><span class="pre">as_str</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#jacquard.api.JacquardValue.as_str" title="Link to this definition">#</a></dt>
+<dd><p>Resolves the value to str</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#jacquard.api.JacquardTypeError" title="jacquard.api.JacquardTypeError"><strong>JacquardTypeError</strong></a> – If the value cannot be resolved to str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="jacquard.api.JacquardValue.as_type">
+<span class="sig-name descname"><span class="pre">as_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type_</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#jacquard.api.JacquardValue.as_type" title="Link to this definition">#</a></dt>
+<dd><p>Attempts to cast the value to a specified type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>type</strong> (<em>type</em>) – The type (e.g. int, float, etc.) to try to cast</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The value cast as type</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#jacquard.api.JacquardTypeError" title="jacquard.api.JacquardTypeError"><strong>JacquardTypeError</strong></a> – if the casting could not be performed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="jacquard.api.JacquardValue.namespace">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">namespace</span></span><a class="headerlink" href="#jacquard.api.JacquardValue.namespace" title="Link to this definition">#</a></dt>
+<dd><p>Dot-separated name of this jacquard value</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="jacquard.api.is_identifier">
+<span class="sig-prename descclassname"><span class="pre">jacquard.api.</span></span><span class="sig-name descname"><span class="pre">is_identifier</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#jacquard.api.is_identifier" title="Link to this definition">#</a></dt>
+<dd><p>Tests that the name is a valid Python variable name and does not collide with reserved keywords</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – Name to test</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>If the name is ‘Pythonic’</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="jacquard.api.open_file">
+<span class="sig-prename descclassname"><span class="pre">jacquard.api.</span></span><span class="sig-name descname"><span class="pre">open_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_handle</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#jacquard.api.open_file" title="Link to this definition">#</a></dt>
+<dd><p>Context manager for opening files provided as several different types. Supports a file handler as a str, unicode,
+<code class="docutils literal notranslate"><span class="pre">pathlib.Path</span></code>, or an already-opened handler.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>file_handle</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>unicode</em><em>, </em><em>Path</em><em>, </em><em>File</em><em>]</em>) – The item to be opened or is already open.</p></li>
+<li><p><strong>**kwargs</strong> – Keyword args passed to <code class="docutils literal notranslate"><span class="pre">open()</span></code>. Usually mode=’w’.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Yields<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>File</em> – The opened file handler. Automatically closed once out of context.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
 
 
                 </article>
@@ -521,22 +700,13 @@ to access this Jacquard from the parent.</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../index.html"
+       href="../overview/index.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">wsp-jacquard: JSON Configuration Tools</p>
+        <p class="prev-next-title">Overview</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="../api/index.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">API</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -556,17 +726,40 @@ to access this Jacquard from the parent.</p>
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jacquard.jacquard.Jacquard"><code class="docutils literal notranslate"><span class="pre">Jacquard</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jacquard.jacquard.Jacquard.as_dict"><code class="docutils literal notranslate"><span class="pre">Jacquard.as_dict()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jacquard.jacquard.Jacquard.file"><code class="docutils literal notranslate"><span class="pre">Jacquard.file</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jacquard.jacquard.Jacquard.from_dict"><code class="docutils literal notranslate"><span class="pre">Jacquard.from_dict()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jacquard.jacquard.Jacquard.from_file"><code class="docutils literal notranslate"><span class="pre">Jacquard.from_file()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jacquard.jacquard.Jacquard.from_string"><code class="docutils literal notranslate"><span class="pre">Jacquard.from_string()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jacquard.jacquard.Jacquard.name"><code class="docutils literal notranslate"><span class="pre">Jacquard.name</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jacquard.jacquard.Jacquard.namespace"><code class="docutils literal notranslate"><span class="pre">Jacquard.namespace</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jacquard.jacquard.Jacquard.parent"><code class="docutils literal notranslate"><span class="pre">Jacquard.parent</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jacquard.jacquard.Jacquard.serialize"><code class="docutils literal notranslate"><span class="pre">Jacquard.serialize()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jacquard.jacquard.Jacquard.to_file"><code class="docutils literal notranslate"><span class="pre">Jacquard.to_file()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-jacquard.jacquard">jacquard.py</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jacquard.jacquard.Jacquard"><code class="docutils literal notranslate"><span class="pre">Jacquard</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#jacquard.jacquard.Jacquard.as_dict"><code class="docutils literal notranslate"><span class="pre">Jacquard.as_dict()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#jacquard.jacquard.Jacquard.file"><code class="docutils literal notranslate"><span class="pre">Jacquard.file</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#jacquard.jacquard.Jacquard.from_dict"><code class="docutils literal notranslate"><span class="pre">Jacquard.from_dict()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#jacquard.jacquard.Jacquard.from_file"><code class="docutils literal notranslate"><span class="pre">Jacquard.from_file()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#jacquard.jacquard.Jacquard.from_string"><code class="docutils literal notranslate"><span class="pre">Jacquard.from_string()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#jacquard.jacquard.Jacquard.name"><code class="docutils literal notranslate"><span class="pre">Jacquard.name</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#jacquard.jacquard.Jacquard.namespace"><code class="docutils literal notranslate"><span class="pre">Jacquard.namespace</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#jacquard.jacquard.Jacquard.parent"><code class="docutils literal notranslate"><span class="pre">Jacquard.parent</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#jacquard.jacquard.Jacquard.serialize"><code class="docutils literal notranslate"><span class="pre">Jacquard.serialize()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#jacquard.jacquard.Jacquard.to_file"><code class="docutils literal notranslate"><span class="pre">Jacquard.to_file()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-jacquard.api">api.py</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jacquard.api.JacquardParseError"><code class="docutils literal notranslate"><span class="pre">JacquardParseError</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jacquard.api.JacquardSpecificationError"><code class="docutils literal notranslate"><span class="pre">JacquardSpecificationError</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jacquard.api.JacquardTypeError"><code class="docutils literal notranslate"><span class="pre">JacquardTypeError</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jacquard.api.JacquardValue"><code class="docutils literal notranslate"><span class="pre">JacquardValue</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#jacquard.api.JacquardValue.as_bool"><code class="docutils literal notranslate"><span class="pre">JacquardValue.as_bool()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#jacquard.api.JacquardValue.as_float"><code class="docutils literal notranslate"><span class="pre">JacquardValue.as_float()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#jacquard.api.JacquardValue.as_int"><code class="docutils literal notranslate"><span class="pre">JacquardValue.as_int()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#jacquard.api.JacquardValue.as_list"><code class="docutils literal notranslate"><span class="pre">JacquardValue.as_list()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#jacquard.api.JacquardValue.as_path"><code class="docutils literal notranslate"><span class="pre">JacquardValue.as_path()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#jacquard.api.JacquardValue.as_set"><code class="docutils literal notranslate"><span class="pre">JacquardValue.as_set()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#jacquard.api.JacquardValue.as_str"><code class="docutils literal notranslate"><span class="pre">JacquardValue.as_str()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#jacquard.api.JacquardValue.as_type"><code class="docutils literal notranslate"><span class="pre">JacquardValue.as_type()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#jacquard.api.JacquardValue.namespace"><code class="docutils literal notranslate"><span class="pre">JacquardValue.namespace</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jacquard.api.is_identifier"><code class="docutils literal notranslate"><span class="pre">is_identifier()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jacquard.api.open_file"><code class="docutils literal notranslate"><span class="pre">open_file()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -575,7 +768,7 @@ to access this Jacquard from the parent.</p>
   <div class="sidebar-secondary-item">
 
   <div class="tocsection sourcelink">
-    <a href="../_sources/jacquard/index.rst.txt">
+    <a href="../_sources/api_reference/index.rst.txt">
       <i class="fa-solid fa-file-lines"></i> Show Source
     </a>
   </div>
@@ -606,7 +799,7 @@ to access this Jacquard from the parent.</p>
 
   <p class="copyright">
     
-      © Copyright 2024, WSP Canada Inc..
+      © Copyright 2024, WSP Canada Inc.
       <br/>
     
   </p>

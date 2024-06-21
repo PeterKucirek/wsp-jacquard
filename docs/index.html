@@ -10,7 +10,7 @@
     <link href="_static/favicon-16x16.png" sizes="16x16" rel="icon" type="image/png">
     <link href="_static/favicon-32x32.png" sizes="32x32" rel="icon" type="image/png">
     <link rel="apple-touch-icon" href="_static/apple-touch-icon.png" sizes="180x180" type="image/png">
-    <title>wsp-jacquard: JSON Configuration Tools &#8212; wsp-jacquard 1.0.2 documentation</title>
+    <title>wsp-jacquard &#8212; wsp-jacquard 1.0.3 documentation</title>
   
   
   
@@ -37,13 +37,13 @@
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
   <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
 
-    <script src="_static/documentation_options.js?v=1ed6394b"></script>
+    <script src="_static/documentation_options.js?v=baaebd52"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Jacquard" href="jacquard/index.html" />
+    <link rel="next" title="Overview" href="overview/index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -121,8 +121,8 @@
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="wsp-jacquard 1.0.2 documentation - Home"/>
-    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="wsp-jacquard 1.0.2 documentation - Home"/>`);</script>
+    <img src="_static/logo.png" class="logo__image only-light" alt="wsp-jacquard 1.0.3 documentation - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="wsp-jacquard 1.0.3 documentation - Home"/>`);</script>
   
   
 </a></div>
@@ -138,15 +138,15 @@
   <ul class="bd-navbar-elements navbar-nav">
     
 <li class="nav-item pst-header-nav-item">
-  <a class="nav-link nav-internal" href="jacquard/index.html">
-    Jacquard
+  <a class="nav-link nav-internal" href="overview/index.html">
+    Overview
   </a>
 </li>
 
 
 <li class="nav-item pst-header-nav-item">
-  <a class="nav-link nav-internal" href="api/index.html">
-    API
+  <a class="nav-link nav-internal" href="api_reference/index.html">
+    API Reference
   </a>
 </li>
 
@@ -253,15 +253,15 @@ document.write(`
   <ul class="bd-navbar-elements navbar-nav">
     
 <li class="nav-item pst-header-nav-item">
-  <a class="nav-link nav-internal" href="jacquard/index.html">
-    Jacquard
+  <a class="nav-link nav-internal" href="overview/index.html">
+    Overview
   </a>
 </li>
 
 
 <li class="nav-item pst-header-nav-item">
-  <a class="nav-link nav-internal" href="api/index.html">
-    API
+  <a class="nav-link nav-internal" href="api_reference/index.html">
+    API Reference
   </a>
 </li>
 
@@ -330,54 +330,43 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="wsp-jacquard-json-configuration-tools">
-<h1>wsp-jacquard: JSON Configuration Tools<a class="headerlink" href="#wsp-jacquard-json-configuration-tools" title="Link to this heading">#</a></h1>
-<p><code class="docutils literal notranslate"><span class="pre">wsp-jacquard</span></code> is a collection of functions and tools for Python to handle JSON-based configurations for models. The library is designed to facilitate application of models, where the model’s configuration (locations of data, options, parameters) is stored in a human-readable JSON file.</p>
-<p>The import statement for the <code class="docutils literal notranslate"><span class="pre">wsp-jacquard</span></code> package is as follows:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">jacquard</span>
+  <section id="wsp-jacquard">
+<h1>wsp-jacquard<a class="headerlink" href="#wsp-jacquard" title="Link to this heading">#</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">wsp-jacquard</span></code> is a collection of functions and tools for Python to handle JSON-based configurations for models.</p>
+<p>Historically, a Jacquard machine is a programmable loom controlled by a chain of cards (<a class="reference external" href="https://en.wikipedia.org/wiki/Jacquard_machine">https://en.wikipedia.org/wiki/Jacquard_machine</a>); the term “jacquard” refers to the card (or set of cards) used to configure the machine. The <cite>jacquard</cite> library is designed to facilitate application of models, where the a model’s configuration (locations of data, options, parameters) are stored in a human-readable JSON file.</p>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading">#</a></h2>
+<p>Jacquard can be installed with conda by running:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>wsp_sap<span class="w"> </span>wsp-jacquard
 </pre></div>
 </div>
 <div class="toctree-wrapper compound">
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="jacquard/index.html">Jacquard</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="jacquard/index.html#jacquard.jacquard.Jacquard"><code class="docutils literal notranslate"><span class="pre">Jacquard</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="jacquard/index.html#jacquard.jacquard.Jacquard.as_dict"><code class="docutils literal notranslate"><span class="pre">Jacquard.as_dict()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="jacquard/index.html#jacquard.jacquard.Jacquard.file"><code class="docutils literal notranslate"><span class="pre">Jacquard.file</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="jacquard/index.html#jacquard.jacquard.Jacquard.from_dict"><code class="docutils literal notranslate"><span class="pre">Jacquard.from_dict()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="jacquard/index.html#jacquard.jacquard.Jacquard.from_file"><code class="docutils literal notranslate"><span class="pre">Jacquard.from_file()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="jacquard/index.html#jacquard.jacquard.Jacquard.from_string"><code class="docutils literal notranslate"><span class="pre">Jacquard.from_string()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="jacquard/index.html#jacquard.jacquard.Jacquard.name"><code class="docutils literal notranslate"><span class="pre">Jacquard.name</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="jacquard/index.html#jacquard.jacquard.Jacquard.namespace"><code class="docutils literal notranslate"><span class="pre">Jacquard.namespace</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="jacquard/index.html#jacquard.jacquard.Jacquard.parent"><code class="docutils literal notranslate"><span class="pre">Jacquard.parent</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="jacquard/index.html#jacquard.jacquard.Jacquard.serialize"><code class="docutils literal notranslate"><span class="pre">Jacquard.serialize()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="jacquard/index.html#jacquard.jacquard.Jacquard.to_file"><code class="docutils literal notranslate"><span class="pre">Jacquard.to_file()</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview/index.html">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="overview/index.html#design">Design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview/index.html#usage">Usage</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="api_reference/index.html">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api_reference/index.html#module-jacquard.jacquard">jacquard.py</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api_reference/index.html#jacquard.jacquard.Jacquard"><code class="docutils literal notranslate"><span class="pre">Jacquard</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="api/index.html">API</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="api/index.html#jacquard.api.JacquardParseError"><code class="docutils literal notranslate"><span class="pre">JacquardParseError</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/index.html#jacquard.api.JacquardSpecificationError"><code class="docutils literal notranslate"><span class="pre">JacquardSpecificationError</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/index.html#jacquard.api.JacquardTypeError"><code class="docutils literal notranslate"><span class="pre">JacquardTypeError</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/index.html#jacquard.api.JacquardValue"><code class="docutils literal notranslate"><span class="pre">JacquardValue</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#jacquard.api.JacquardValue.as_bool"><code class="docutils literal notranslate"><span class="pre">JacquardValue.as_bool()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#jacquard.api.JacquardValue.as_float"><code class="docutils literal notranslate"><span class="pre">JacquardValue.as_float()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#jacquard.api.JacquardValue.as_int"><code class="docutils literal notranslate"><span class="pre">JacquardValue.as_int()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#jacquard.api.JacquardValue.as_list"><code class="docutils literal notranslate"><span class="pre">JacquardValue.as_list()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#jacquard.api.JacquardValue.as_path"><code class="docutils literal notranslate"><span class="pre">JacquardValue.as_path()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#jacquard.api.JacquardValue.as_set"><code class="docutils literal notranslate"><span class="pre">JacquardValue.as_set()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#jacquard.api.JacquardValue.as_str"><code class="docutils literal notranslate"><span class="pre">JacquardValue.as_str()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#jacquard.api.JacquardValue.as_type"><code class="docutils literal notranslate"><span class="pre">JacquardValue.as_type()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#jacquard.api.JacquardValue.namespace"><code class="docutils literal notranslate"><span class="pre">JacquardValue.namespace</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_reference/index.html#module-jacquard.api">api.py</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api_reference/index.html#jacquard.api.JacquardParseError"><code class="docutils literal notranslate"><span class="pre">JacquardParseError</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api_reference/index.html#jacquard.api.JacquardSpecificationError"><code class="docutils literal notranslate"><span class="pre">JacquardSpecificationError</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api_reference/index.html#jacquard.api.JacquardTypeError"><code class="docutils literal notranslate"><span class="pre">JacquardTypeError</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api_reference/index.html#jacquard.api.JacquardValue"><code class="docutils literal notranslate"><span class="pre">JacquardValue</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api_reference/index.html#jacquard.api.is_identifier"><code class="docutils literal notranslate"><span class="pre">is_identifier()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api_reference/index.html#jacquard.api.open_file"><code class="docutils literal notranslate"><span class="pre">open_file()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="api/index.html#jacquard.api.is_identifier"><code class="docutils literal notranslate"><span class="pre">is_identifier()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/index.html#jacquard.api.open_file"><code class="docutils literal notranslate"><span class="pre">open_file()</span></code></a></li>
 </ul>
 </li>
 </ul>
 </div>
+</section>
 </section>
 
 
@@ -391,11 +380,11 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="right-next"
-       href="jacquard/index.html"
+       href="overview/index.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Jacquard</p>
+        <p class="prev-next-title">Overview</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -408,6 +397,18 @@ document.write(`
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
+</ul>
+  </nav></div>
 
   <div class="sidebar-secondary-item">
 
@@ -443,7 +444,7 @@ document.write(`
 
   <p class="copyright">
     
-      © Copyright 2024, WSP Canada Inc..
+      © Copyright 2024, WSP Canada Inc.
       <br/>
     
   </p>

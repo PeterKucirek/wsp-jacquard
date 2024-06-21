@@ -29,7 +29,7 @@ version_ = parse_version(jacquard.__version__)
 # -- Project information -----------------------------------------------------
 
 project = 'wsp-jacquard'
-author = 'WSP Canada Inc.'
+author = 'WSP Canada Inc'
 copyright = f'{datetime.today().year}, {author}'
 
 # The short X.Y version

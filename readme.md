@@ -41,7 +41,7 @@ n_iterations = int(d['traffic_assignment']['iterations'])
 with
 
 ```python
-from jacquard import Jacquard
+from wsp_jacquard import Jacquard
 
 config = Jacquard.from_file(r"path/to/example.json")
 
@@ -83,7 +83,7 @@ Using a Jacquard to self-validate a file is best shown by example:
 ```
 
 ```python
-from jacquard import Jacquard
+from wsp_jacquard import Jacquard
 
 config = Jacquard.from_file(r"path/to/example.json")
 

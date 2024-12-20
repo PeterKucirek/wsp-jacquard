@@ -1,0 +1,31 @@
+context:
+  name: wsp-jacquard
+  git_repo_url: https://github.com/wsp-sag/wsp-jacquard
+  latest_tag: ${{ git.latest_tag( git_repo_url ) }}
+
+package:
+  name: ${{ name }}
+  version: ${{ latest_tag }}
+
+source:
+  git: ${{ git_repo_url }}
+  tag: ${{ latest_tag }}
+
+build:
+  noarch: python
+  script: pip install . -v
+
+requirements:
+  host:
+    - python >=3.7
+    - pip
+    - setuptools >=64
+    - setuptools-scm >=8
+  run:
+    - python >=3.7
+
+about:
+  homepage: ${{ git_repo_url }}
+  license: MIT
+  license_file: LICENSE
+  summary: JSON-based configuration handler for models

@@ -1,19 +1,23 @@
 # Jacquard (wsp-jacquard)
 
-[![Conda Latest Release](https://anaconda.org/wsp_sap/wsp-jacquard/badges/version.svg)](https://anaconda.org/wsp_sap/wsp-jacquard)
-[![Conda Last Updated](https://anaconda.org/wsp_sap/wsp-jacquard/badges/latest_release_date.svg)](https://anaconda.org/wsp_sap/wsp-jacquard)
-[![Platforms](https://anaconda.org/wsp_sap/wsp-jacquard/badges/platforms.svg)](https://anaconda.org/wsp_sap/wsp-jacquard)
-[![License](https://anaconda.org/wsp_sap/wsp-jacquard/badges/license.svg)](https://github.com/wsp-sag/wsp-jacquard/blob/master/LICENSE)
-
 A JSON-based configuration handler for models
 
 Historically, a [Jacquard machine is a programmable loom controlled by a chain of cards](https://en.wikipedia.org/wiki/Jacquard_machine); the term "jacquard" refers to the card (or set of cards) used to configure the machine. The `jacquard` library is designed to facilitate application of models, where the a model's configuration (locations of data, options, parameters) are stored in a human-readable JSON file.
 
 Jacquard is developed and maintained by WSP Canada's Systems Analytics for Policy group.
 
+> [!IMPORTANT]
+> As of v2.0, this package is imported using `wsp_jacquard` instead of `jacquard`
+
 ## Installation
 
-Jacquard can be installed with conda by running:
+Jacquard can be installed by running:
+
+```batch
+pip install wsp-jacquard
+```
+
+or
 
 ```batch
 conda install -c wsp_sap wsp-jacquard
